@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>موقع الاستضافة الاحترافي</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+<!-- إضافة مكتبة AOS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+/* الهيدر الثابت */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* لتجنب أن يغطي الهيدر المحتوى */
+body {
+    padding-top: 80px;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* الشعار */
+.navbar-brand img {
+    height: 50px;
+}
+
+/* تنشيط الرابط الحالي */
+.nav-link.active {
+    color: #0d6efd !important;
+    font-weight: bold;
+    border-bottom: 2px solid #0d6efd;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0d6efd, #6c63ff);
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px 100px;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.hero p {
+    font-size: 1.3rem;
+    margin: 20px 0;
+}
+
+/* أقسام الخدمات والباقات */
+.service-card, .pricing-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #fff;
+}
+.service-card:hover, .pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.service-card img, .pricing-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+/* الفوتر */
+footer {
+    background: #f8f9fa;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+/* روابط الهيدر */
+.navbar-nav .nav-link {
+    margin: 0 10px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="/images/logo.png" alt="شعار الموقع">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">خدماتنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#packages">الباقات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">اتصل بنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- الرئيسية -->
+<section id="home" class="hero" data-aos="fade-down">
+    <div>
+        <h1>مرحبا بكم في شركتنا</h1>
+        <p>أفضل الحلول التقنية والاستضافة لمواقعكم</p>
+        <a href="#contact" class="btn btn-light btn-lg">تواصل معنا</a>
+    </div>
+</section>
+
+<!-- خدماتنا -->
+<section id="services" class="container my-5">
+    <h2 class="text-center mb-4" data-aos="fade-up">خدماتنا</h2>
+    <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card service-card text-center">
+                <img src="https://yemenhosting.com/includes/assets/images/designing.svg" class="card-img-top" alt="تصميم مواقع">
+                <div class="card-body">
+                    <h5 class="card-title">تصميم المواقع</h5>
+                    <p class="card-text">نقدم تصميم مواقع احترافي ومتجاوب لجميع الأجهزة.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card service-card text-center">
+                <img src="https://yemenhosting.com/includes/assets/images/designing.svg" class="card-img-top" alt="استضافة">
+                <div class="card-body">
+                    <h5 class="card-title">استضافة المواقع</h5>
+                    <p class="card-text">خوادم سريعة وآمنة لدعم موقعك على مدار الساعة.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card service-card text-center">
+                <img src="/images/service3.jpg" class="card-img-top" alt="تسويق رقمي">
+                <div class="card-body">
+                    <h5 class="card-title">التسويق الرقمي</h5>
+                    <p class="card-text">حلول تسويقية متكاملة لزيادة تواجدك على الإنترنت.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- باقات الاستضافة -->
+<section id="packages" class="container my-5">
+    <h2 class="text-center mb-4" data-aos="fade-up">باقات الاستضافة</h2>
+    <div class="row g-4">
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-card text-center">
+                <img src="https://yemenhosting.com/includes/assets/images/designing.svg" alt="باقة أساسية">
+                <h4>باقة أساسية</h4>
+                <p>5$ / شهر</p>
+                <ul class="list-unstyled">
+                    <li>1 موقع</li>
+                    <li>10GB مساحة</li>
+                    <li>دعم 24/7</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">اشترك الآن</a>
+            </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-card text-center">
+                <img src="https://yemenhosting.com/includes/assets/images/designing.svg" alt="باقة متوسطة">
+                <h4>باقة متوسطة</h4>
+                <p>10$ / شهر</p>
+                <ul class="list-unstyled">
+                    <li>5 مواقع</li>
+                    <li>50GB مساحة</li>
+                    <li>دعم 24/7</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">اشترك الآن</a>
+            </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="pricing-card text-center">
+                <img src="/images/advanced-icon.png" alt="باقة متقدمة">
+                <h4>باقة متقدمة</h4>
+                <p>20$ / شهر</p>
+                <ul class="list-unstyled">
+                    <li>غير محدود</li>
+                    <li>200GB مساحة</li>
+                    <li>دعم VIP</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">اشترك الآن</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- اتصل بنا -->
+<section id="contact" class="container my-5" data-aos="fade-up">
+    <h2 class="text-center mb-4">اتصل بنا</h2>
+    <form class="mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+            <label for="name" class="form-label">الاسم</label>
+            <input type="text" class="form-control" id="name" placeholder="اسمك">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">البريد الإلكتروني</label>
+            <input type="email" class="form-control" id="email" placeholder="email@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">الرسالة</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="اكتب رسالتك هنا"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">أرسل</button>
+    </form>
+</section>
+
+<!-- الفوتر -->
+<footer>
+    <div class="container text-center">
+        <p>&copy; 2025 شركتنا. جميع الحقوق محفوظة.</p>
+        <p>تواصل معنا: info@example.com | 123456789</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({
+    duration: 1000,
+    once: true
+});
+
+// تفعيل رابط الهيدر النشط أثناء التمرير
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 90;
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    });
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if(link.getAttribute('href') === '#' + current){
+            link.classList.add('active');
+        }
+    });
+});
+</script>
+</body>
+</html>
