@@ -14,12 +14,16 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 body {
     font-family: 'Cairo', sans-serif;
     padding-top: 100px;
     scroll-behavior: smooth;
-    background-color: #fdfdfd;
+    background-color: #000;   /* الخلفية سوداء */
+    color: #fff;             /* النص أبيض */
 }
 
 /* الهيدر */
@@ -27,8 +31,8 @@ header {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 1000;
-    background: linear-gradient(90deg, #4e54c8, #8f94fb);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: linear-gradient(90deg, #111, #000); /* رمادي غامق → أسود */
+    box-shadow: 0 2px 10px rgba(255,255,255,0.1); /* ظل فاتح خفيف */
 }
 .navbar .nav-link {
     color: #fff !important;
@@ -37,7 +41,7 @@ header {
     transition: color 0.3s;
 }
 .navbar .nav-link:hover {
-    color: #ffd369 !important;
+    color: #ffd369 !important; /* ذهبي عند المرور */
 }
 .navbar-brand img {
     height: 55px;
@@ -45,7 +49,7 @@ header {
 
 /* Hero */
 .hero {
-    background: linear-gradient(rgba(78,84,200,0.7), rgba(143,148,251,0.7)), url('/images/hero-bg.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/images/hero-bg.jpg') center/cover no-repeat;
     height: 90vh;
     display: flex; align-items: center; justify-content: center;
     text-align: center;
@@ -80,20 +84,18 @@ h2 {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 40px;
-    color: #333;
+    color: #fff;
 }
 .card, .pricing-card {
     border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #111;   /* خلفية الكروت غامقة */
+    color: #fff;
 }
 .card:hover, .pricing-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-.pricing-card img, .service-card img {
-    width: 70px; height: 70px;
-    margin-bottom: 15px;
+    box-shadow: 0 10px 25px rgba(255,255,255,0.2);
 }
 .btn-primary {
     background: linear-gradient(90deg, #4e54c8, #8f94fb);
@@ -121,7 +123,7 @@ h2 {
     width: 140px; height: 140px;
     object-fit: cover;
     margin: 0 auto 15px auto;
-    border: 5px solid #f0f0f0;
+    border: 5px solid #333;
     transition: transform 0.3s;
 }
 .team img:hover {
@@ -130,10 +132,19 @@ h2 {
 
 /* الفوتر */
 footer {
-    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    background: #111;
     padding: 25px 0;
     color: #fff;
     font-size: 0.95rem;
+}
+footer .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+footer .social-icons a:hover {
+    color: #ffd369;
 }
 </style>
 </head>
@@ -143,7 +154,7 @@ footer {
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="شعار الموقع"></a>
+            <a class="navbar-brand" href="#"><img src="images/logo.png" alt="شعار الموقع"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -166,8 +177,8 @@ footer {
 <!-- Hero -->
 <section id="home" class="hero">
     <div data-aos="fade-up">
-        <h1>مرحبا بكم في شركتنا</h1>
-        <p>أفضل الحلول التقنية والاستضافة لمواقعكم</p>
+        <h1>مرحبا بكم في بوابة التسويق الرقمية</h1>
+        <p>أفضل الحلول التقنية والاستضافة لمتاجركم ومواقعكم الالكترونية</p>
         <a href="#contact" class="btn btn-lg">تواصل معنا</a>
     </div>
 </section>
@@ -179,14 +190,14 @@ footer {
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
             <div class="card text-center p-3 service-card">
                 <img src="/images/service1.svg" alt="">
-                <h5>تصميم المواقع</h5>
-                <p>تصميم مواقع احترافي ومتجاوب لجميع الأجهزة.</p>
+                <h5>تصميم المتاجر</h5>
+                <p>تصميم متاجر احترافية ومتجاوبة لجميع الأجهزة.</p>
             </div>
         </div>
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="card text-center p-3 service-card">
                 <img src="/images/service2.svg" alt="">
-                <h5>استضافة المواقع</h5>
+                <h5>استضافة المتاجر</h5>
                 <p>خوادم سريعة وآمنة لدعم موقعك على مدار الساعة.</p>
             </div>
         </div>
@@ -253,8 +264,8 @@ footer {
         <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
             <div class="card text-center p-3">
                 <img src="/images/work1.jpg" alt="">
-                <h5>مشروع تصميم موقع</h5>
-                <p>تصميم موقع لشركة تقنية بواجهة حديثة وسريعة.</p>
+                <h5>متجر بسيط الالكتروني</h5>
+                <p>متجر الكتروني متخصص في بيع المنتجات الغذائية</p>
             </div>
         </div>
         <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
@@ -278,12 +289,25 @@ footer {
 <section id="partners" class="container text-center">
     <h2 data-aos="fade-up">شركاؤنا</h2>
     <div class="row g-4 justify-content-center">
-        <div class="col-6 col-md-2" data-aos="zoom-in" data-aos-delay="100"><img src="/images/partner1.png" class="img-fluid"></div>
-        <div class="col-6 col-md-2" data-aos="zoom-in" data-aos-delay="200"><img src="/images/partner2.png" class="img-fluid"></div>
-        <div class="col-6 col-md-2" data-aos="zoom-in" data-aos-delay="300"><img src="/images/partner3.png" class="img-fluid"></div>
-        <div class="col-6 col-md-2" data-aos="zoom-in" data-aos-delay="400"><img src="/images/partner4.png" class="img-fluid"></div>
+        <div class="col-6 col-md-2" data-aos="zoom-in" data-aos-delay="100">
+            <img src="images/shark1.png" class="img-fluid">
+            <p class="mt-2">الشريك الأول</p>
+        </div>
+        <div class="col-6 col-md-2" data-aos="zoom-in" data-aos-delay="200">
+            <img src="images/shark1.png" class="img-fluid">
+            <p class="mt-2">الشريك الثاني</p>
+        </div>
+        <div class="col-6 col-md-2" data-aos="zoom-in" data-aos-delay="300">
+            <img src="images/shark1.png" class="img-fluid">
+            <p class="mt-2">الشريك الثالث</p>
+        </div>
+        <div class="col-6 col-md-2" data-aos="zoom-in" data-aos-delay="400">
+            <img src="images/shark1.png" class="img-fluid">
+            <p class="mt-2">الشريك الرابع</p>
+        </div>
     </div>
 </section>
+
 
 <!-- الأعضاء -->
 <section id="team" class="container team text-center">
@@ -294,32 +318,31 @@ footer {
                 <img src="images/saber.jpg" class="rounded-circle" alt="">
                 <h5>م.صابر أحمد حسن</h5> 
                 <p>مبرمج وخبير نضم معلومات </p>
-                              <p>ومطور واجهات ومطور Frontend</p>
-
+                <p>ومطور واجهات ومطور Frontend</p>
             </div>
         </div>
         <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
             <div class="card p-3">
-                <img src="/images/member2.jpg" class="rounded-circle" alt="">
-                <h5>م.اياب العبيدي </h5>
+                <img src="images/eyab.jpg" class="rounded-circle" alt="">
+                <h5>م.اياب العبيدي</h5>
                 <p>مبرمج وخبير نضم معلومات </p>
-                              <p>ومطور واجهات ومطور Frontend</p>
+                <p>ومطور واجهات ومطور Frontend</p>
             </div>
         </div>
         <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
             <div class="card p-3">
-                <img src="/images/member3.jpg" class="rounded-circle" alt="">
-                <<h5>م.سفيان البيل</h5>
+                <img src="images/sufian.jpg" class="rounded-circle" alt="">
+                <h5>م.سفيان البيل</h5>
                 <p>مبرمج وخبير نضم معلومات </p>
-                              <p>ومطور واجهات ومطور Frontend</p>
+                <p>ومطور واجهات ومطور Frontend</p>
             </div>
         </div>
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
             <div class="card p-3">
-                <img src="/images/member3.jpg" class="rounded-circle" alt="">
-                <<h5>أ.محمد العبسي</h5>
-                <p>خبير اداري </p>
-                              <p>مستشار تسويق ومختص تسويق الكتروني</p>
+                <img src="images/absi.jpg" class="rounded-circle" alt="">
+                <h5>أ.محمد العبسي</h5>
+                <p>خبير إداري </p>
+                <p>مستشار تسويق ومختص تسويق الكتروني</p>
             </div>
         </div>
     </div>
@@ -329,13 +352,21 @@ footer {
 <section id="contact" class="container text-center">
     <h2 data-aos="fade-up">اتصل بنا</h2>
     <p>يمكنك التواصل معنا عبر البريد الإلكتروني أو الهاتف</p>
-    <p>info@example.com | 123456789</p>
+    <p>info@example.com | 734588881</p>
 </section>
 
 <!-- الفوتر -->
 <footer>
     <div class="container text-center">
-        <p>&copy; 2025 شركتنا. جميع الحقوق محفوظة.</p>
+        <p>&copy; 2025 بوابة التسويق. جميع الحقوق محفوظة.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61580166481880" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                   <!-- أيقونة واتساب -->
+                   <a href="https://wa.me/967734588881" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
     </div>
 </footer>
 
